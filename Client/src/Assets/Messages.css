@@ -70,3 +70,7 @@
     font-size: 2.3em;
     color: grey;
 }
+.Expiry-period h1{
+    position: relative;
+    top: 14px;
+}
