@@ -1,0 +1,42 @@
+[
+    {   
+        "ProductName" : "Integrated Chips",
+        "ProductID" : "45TBC89",
+        "Status" : "In-Stock",
+        "Quantity" : "765",
+        "Expiry" : "450 Days",
+        "Location" : "Warehouse 3, Batch 8"
+    },
+    {
+        "ProductName" : "8086 Microprocessor",
+        "ProductID" : "25IOC89",
+        "Status" : "In-Stock",
+        "Quantity" : "569",
+        "Expiry" : "1250 Days",
+        "Location" : "Warehouse 5, Batch 2"
+    },
+    {
+        "ProductName" : "Chipset",
+        "ProductID" : "19YTC36",
+        "Status" : "In-Stock",
+        "Quantity" : "65",
+        "Expiry" : "50 Days",
+        "Location" : "Warehouse 8, Batch 1"
+    },
+    {
+        "ProductName" : "LED lights",
+        "ProductID" : "71RCD89",
+        "Status" : "In-Stock",
+        "Quantity" : "125",
+        "Expiry" : "568 Days",
+        "Location" : "Warehouse 1, Batch 3"
+    },
+    {
+        "ProductName" : "Poppins",
+        "ProductID" : "27YCN54",
+        "Status" : "In-Stock",
+        "Quantity" : "25",
+        "Expiry" : "78 Days",
+        "Location" : "Warehouse 7, Batch 5"
+    }
+]
