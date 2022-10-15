@@ -11,7 +11,7 @@ const SideBar = () => {
                     <section className="logo"><span><Link to = '/' id="logo">Manage It</Link></span></section>
                     <section className="links">
                         <div>
-                            <Link to = '/'>Dashoboard</Link>
+                            <Link to = '/Dashboard'>Dashoboard</Link>
                         </div>
                         <div>
                             
@@ -25,6 +25,9 @@ const SideBar = () => {
                         </div>
                         <div>
                             <Link to = '/History'>History</Link>
+                        </div>
+                        <div>
+                            <Link to = '/DeadStock'>Dead Stock</Link>
                         </div>
                     </section>
                     <section className="more-links">
