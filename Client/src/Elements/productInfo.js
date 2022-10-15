@@ -1,11 +1,13 @@
 import React,{ useCallback,useState } from "react";
 import '../Assets/productInfo.css';
 import SideBar from "./SideBar";
-import { ResponsiveContainer, Pie, PieChart, Sector } from 'recharts'
+import { Pie, PieChart, Sector } from 'recharts';
+import data from '../Assets/ProductInfo.json';
 
-const data = [
-    { name: "Stock", value: 75 },
-    { name: "Expiry", value: 100 },
+
+const datas = [
+    { name: "Stock", value: 52 },
+    { name: "Expiry", value: 45 },
 ];
 
 const renderActiveShape = (props) => {
@@ -83,6 +85,7 @@ const renderActiveShape = (props) => {
 
 const ProductInfo = () =>{   
 
+    const [productInformation, setProductInformatino] = useState(data)
     const [activeIndex, setActiveIndex] = useState(0);
     const onPieEnter = useCallback(
     (_, index) => {
@@ -97,55 +100,62 @@ const ProductInfo = () =>{
             <div className="product-info">
                 <p id="text-heading">Product details</p>
                 <hr />
-                <div className="pdct-information">
+                
+                {productInformation.map((productInformation)=>(
+                 <>
+                 <div className="pdct-information">
                     <p id="product-name">
-                        Integrated Chips
+                        {productInformation.ProductName}
                     </p>
                     <hr />
                     <div className="particular-item-detail">
                         <ul>
                             <li>Product ID : </li>
-                            <li>45TBC89</li>
+                            <li>{productInformation.ProductID}</li>
                         </ul>
                         <ul>
                             <li>Expiry : </li>
-                            <li>450 Days</li>
+                            <li>{productInformation.Expiry}</li>
                         </ul>
                         <ul>
                             <li>Status : </li>
-                            <li>In-stock</li>
+                            <li>{productInformation.Status}</li>
                         </ul>
                         <ul>
                             <li>Quantity : </li>
-                            <li>765</li>
+                            <li>{productInformation.Quantity}</li>
                         </ul>
                         <ul>
                             <li>Location : </li>
-                            <li>Warehouse 3, Batch 8</li>
+                            <li>{productInformation.Location}</li>
                         </ul>
                     </div>
                     <hr />
                 </div>
                 <div className="product-chart">
                     <p>Stock available Vs Expiry period</p>
-                    <div className="pie-chart">
+                    
+                      <div className="pie-chart">
                         <PieChart width={400} height={400}>
-      <Pie
-        activeIndex={activeIndex}
-        activeShape={renderActiveShape}
-        data={data}
-        cx={180}
-        cy={120}
-        innerRadius={60}
-        outerRadius={80}
-        fill="rgba(50, 220, 250,0.5)"
-        dataKey="value"
-        onMouseEnter={onPieEnter}
-      />
-    </PieChart>
+                          <Pie
+                            activeIndex={activeIndex}
+                            activeShape={renderActiveShape}
+                            data={datas}
+                            cx={180}
+                            cy={120}
+                            innerRadius={60}
+                            outerRadius={80}
+                            fill="rgba(50, 220, 250,0.5)"
+                            dataKey="value"
+                            onMouseEnter={onPieEnter}
+                          />
+                        </PieChart>
                     </div>
-                </div>
-            </div>
+                </div> 
+                 </>
+                ))}
+                
+              </div>
         </>
     )
 }
