@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React,{ useState } from "react";
+import '../Assets/DeadStock.css';
 import SideBar from "../Elements/SideBar";
-import '../Assets/History.css';
 import { FaSearch } from "react-icons/fa";
-import data from '../Assets/History-data.json';
+import data from '../Assets/DeadStock-data.json';
 
-const Histroy = () => {
-
+const DeadStock = () =>{
+    
     const Search = () => {
         console.log('Search button is clicked')
     }
-    
     const [ItemDetails, setItemDetails] = useState(data);
 
     return(
         <>
-        <SideBar key = "history" />
+            <SideBar />
             <div className="History">
                 <div className="upper-half">
                     <div className="left-upper-half">
@@ -33,8 +32,8 @@ const Histroy = () => {
                         </div>
                     </div>
                     <div className="right-upper-half">
-                        <p>Your previous</p>
-                        <h1 id="History">History</h1>
+                        <p>Stock Which is</p>
+                        <h1 id="History">Expired</h1>
                     </div>
                 </div>
                 <hr />
@@ -47,8 +46,8 @@ const Histroy = () => {
                                 <th>Product Name</th>
                                 <th>Product ID</th>
                                 <th>Quantity</th>
-                                <th>Date</th>
-                                <th>Status </th>
+                                <th>Location</th>
+                                <th>Date Expired</th>
                             </tr>
                             </tbody>
                             <tbody>
@@ -59,8 +58,8 @@ const Histroy = () => {
                                         <td>{ ItemDetails.Name }</td>
                                         <td>{ ItemDetails.ID}</td>
                                         <td>{ ItemDetails.Quantity }</td>
+                                        <td>{ ItemDetails.Location}</td>
                                         <td>{ ItemDetails.Date }</td>
-                                        <td>{ ItemDetails.Status }</td>
                                     </tr>    
                                     // </>
                                 ))}
@@ -74,4 +73,4 @@ const Histroy = () => {
     )
 }
 
-export default Histroy;
+export default DeadStock;

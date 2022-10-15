@@ -60,9 +60,9 @@ const Dashboard = () => {
                                 <option value="date added">date added</option>
                             </select>
                         </div>
-                        <div className="toggle-button">
+                        {/* <div className="toggle-button">
                             check text
-                        </div>
+                        </div> */}
                     </div>    
                     <div className="list">
                         <table className="Products" key="hello">
