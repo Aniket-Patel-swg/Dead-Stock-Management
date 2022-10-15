@@ -84,7 +84,7 @@ const Dashboard = () => {
                                             {Products.id}
                                         </td>
                                         <td>
-                                            <Link>{Products.Name}</Link> : { Products["ID"]}
+                                            <Link to='/ProductInfo'>{Products.Name}</Link> : { Products["ID"]}
                                         </td>
                                         <td>{Products.Location}</td>
                                         <td>
